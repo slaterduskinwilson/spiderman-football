@@ -89,7 +89,7 @@ body {
     
 }
 
-h1, h2 {
+h1, h2, h6 {
     text-align: center;
 }
 
@@ -98,6 +98,18 @@ a {
 }
 a:visited {
     color: yellow;
+}
+
+a.centered {
+    display: block;
+    text-align: center;
+    /* text-align doesnt work on inline elements, so we need to display this as block */
+    min-width: min-content;
+    
+}
+
+a.centered:hover {
+    color:rgb(255, 0, 144);
 }
 
 .section {
@@ -109,8 +121,12 @@ a:visited {
     max-width: 32rem;
 }
 
-.section h3, .section h4 {
+.section h3, .section h4, .section h6, a.donate {
     color: rgb(60, 255, 0);
+}
+
+.section h6 {
+    font-size: 1.2rem;
 }
 
 .section div {
